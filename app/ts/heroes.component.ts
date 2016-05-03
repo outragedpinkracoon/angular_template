@@ -16,7 +16,6 @@ export class HeroesComponent implements OnInit {
   selectedHero: Hero;
   
   constructor(
-    private _router: Router,
     private _heroService: HeroService) { }
     
   getHeroes() {
@@ -26,9 +25,6 @@ export class HeroesComponent implements OnInit {
     this.getHeroes();
   }
   onSelect(hero: Hero) { this.selectedHero = hero; }
-  gotoDetail() {
-    this._router.navigate(['HeroDetail', { id: this.selectedHero.id }]);
-  }
 }
 
 

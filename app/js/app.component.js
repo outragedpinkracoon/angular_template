@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', './heroes/services/hero.service', './heroes.component', './dashboard.component', './hero-detail.component'], function(exports_1, context_1) {
+System.register(['angular2/core', './heroes/services/hero.service', './heroes.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,27 +10,18 @@ System.register(['angular2/core', 'angular2/router', './heroes/services/hero.ser
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, hero_service_1, heroes_component_1, dashboard_component_1, hero_detail_component_1;
+    var core_1, hero_service_1, heroes_component_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (router_1_1) {
-                router_1 = router_1_1;
-            },
             function (hero_service_1_1) {
                 hero_service_1 = hero_service_1_1;
             },
             function (heroes_component_1_1) {
                 heroes_component_1 = heroes_component_1_1;
-            },
-            function (dashboard_component_1_1) {
-                dashboard_component_1 = dashboard_component_1_1;
-            },
-            function (hero_detail_component_1_1) {
-                hero_detail_component_1 = hero_detail_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -42,30 +33,12 @@ System.register(['angular2/core', 'angular2/router', './heroes/services/hero.ser
                         selector: 'my-app',
                         templateUrl: 'app/views/app.component.html',
                         styleUrls: ['app/css/app.component.css'],
-                        directives: [router_1.ROUTER_DIRECTIVES],
+                        directives: [heroes_component_1.HeroesComponent],
+                        // directives: [ROUTER_DIRECTIVES],
                         providers: [
-                            router_1.ROUTER_PROVIDERS,
                             hero_service_1.HeroService
                         ]
-                    }),
-                    router_1.RouteConfig([
-                        {
-                            path: '/heroes',
-                            name: 'Heroes',
-                            component: heroes_component_1.HeroesComponent
-                        },
-                        {
-                            path: '/dashboard',
-                            name: 'Dashboard',
-                            component: dashboard_component_1.DashboardComponent,
-                            useAsDefault: true
-                        },
-                        {
-                            path: '/detail/:id',
-                            name: 'HeroDetail',
-                            component: hero_detail_component_1.HeroDetailComponent
-                        }
-                    ]), 
+                    }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
                 return AppComponent;
