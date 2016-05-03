@@ -34,7 +34,6 @@ System.register(['angular2/core', './heroes/services/hero.service', './heroes.co
                         templateUrl: 'app/views/app.component.html',
                         styleUrls: ['app/css/app.component.css'],
                         directives: [heroes_component_1.HeroesComponent],
-                        // directives: [ROUTER_DIRECTIVES],
                         providers: [
                             hero_service_1.HeroService
                         ]

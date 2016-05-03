@@ -1,4 +1,4 @@
-System.register(['angular2/core', './hero-detail.component', './heroes/services/hero.service'], function(exports_1, context_1) {
+System.register(['angular2/core', './heroes/services/hero.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,15 +10,12 @@ System.register(['angular2/core', './hero-detail.component', './heroes/services/
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, hero_detail_component_1, hero_service_1;
+    var core_1, hero_service_1;
     var HeroesComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (hero_detail_component_1_1) {
-                hero_detail_component_1 = hero_detail_component_1_1;
             },
             function (hero_service_1_1) {
                 hero_service_1 = hero_service_1_1;
@@ -39,7 +36,6 @@ System.register(['angular2/core', './hero-detail.component', './heroes/services/
                 HeroesComponent = __decorate([
                     core_1.Component({
                         selector: 'my-heroes',
-                        directives: [hero_detail_component_1.HeroDetailComponent],
                         templateUrl: 'app/views/heroes.component.html',
                         styleUrls: ['app/css/heroes.component.css']
                     }), 
